@@ -1,0 +1,1149 @@
+/* Global + Reusable ***************************************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.horizontal-line {
+    width: 65px;
+    height: 3px;
+    background: #fff;
+    margin: 60px auto;
+}
+
+.horizontal-line-red {
+    width: 65px;
+    height: 3px;
+    background: #f38181;
+    margin: 60px auto;
+}
+
+.horizontal-line-grey {
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5;
+    margin: 50px auto;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-learn-more {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    padding: 15px 40px;
+}
+
+/* Header *************************************************/
+
+header {
+    background: linear-gradient(to bottom, #a512cad1, #ab26dbd1, #850acc);
+    height: 100vh;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+nav .logo {
+    padding-top: 30px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding-top: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin: 40px 30px;
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #4f0286;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #4f0286;
+    bottom: -5px;
+    left: 0;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+nav ul li:nth-child(6) a {
+    margin: 40px 20px 40px 30px;
+}
+
+.hero {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.hero h2 {
+    color: #ffffff;
+    font-family: "Kaushan Script";
+    font-size: 72px;
+    font-weight: 400;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 140px;
+    text-transform: uppercase;
+}
+
+/* About *************************************************/
+
+.about h2 {
+    color: #333333;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.about h1 {
+    color: #333333;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about p {
+    color: #999999;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.about .about-gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 100px auto;
+}
+
+.about .about-gallery .gallery-item {
+    margin: 15px;
+    transition: all 0.3s;
+    position: relative;
+    flex-basis: 33.33334%;
+}
+
+.about .about-gallery .gallery-item:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px #d749e9;
+    cursor: pointer;
+}
+
+.about .about-gallery .gallery-item::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #aa1dc7d1, #8b14c3d1);
+    transition: all 0.3s;
+}
+
+.about .about-gallery .gallery-item:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.about .about-gallery .gallery-item .icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    display: none;
+    transition: all 0.3s;
+}
+
+.about .about-gallery .gallery-item:hover .icon,
+.about .about-gallery .gallery-item:hover p {
+    display: block;
+    color: #fff;
+}
+
+.about .about-gallery .gallery-item p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.about .about-gallery .gallery-item .icon .fas {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.about .about-gallery .gallery-item img {
+    width: 100%;
+}
+
+/* Numbers *************************************************/
+
+.numbers {
+    background: #6f2db6;
+}
+
+.numbers .container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.numbers .numbers-box {
+    padding: 90px 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    flex-basis: 20%;
+    text-align: center;
+}
+
+.numbers .numbers-box:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.numbers h1 {
+    color: #ffffff;
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.numbers span {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Services *************************************************/
+
+.services {
+    padding: 100px 0;
+}
+
+.services h2 {
+    color: #333333;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.services h1 {
+    color: #333333;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.services .row-items .item-box .box-logo img {
+    width: 150%;
+}
+
+.services .row-items .item-box .box-info {
+    padding-left: 25px;
+}
+
+.services .row-items .item-box .box-info p {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.services .row-items .item-box .box-info span {
+    color: #999999;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.services .row-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.services .row-items .item-box {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    flex-basis: 33.3334%;
+}
+
+/* Devices *************************************************/
+
+.devices {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(images/background-devices.png);
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 600px;
+    position: relative;
+}
+
+.devices h2 {
+    color: #333333;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.devices h1 {
+    color: #333333;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.devices .devices-item {
+    position: absolute;
+    bottom: -91px;
+    left: 35%;
+}
+
+/* What we do *************************************************/
+
+.what-we-do {
+    padding: 110px 0;
+}
+
+.what-we-do h2 {
+    color: #333333;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.what-we-do h1 {
+    color: #333333;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.what-we-do .row-photo,
+.what-we-do #accordion {
+    flex-basis: 50%;
+}
+
+.what-we-do #accordion .card {
+    margin-bottom: 10px;
+}
+
+.what-we-do #accordion .card:last-child {
+    margin-bottom: 0;
+}
+
+.what-we-do #accordion .card span {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 12px;
+}
+
+.what-we-do #accordion p a:hover {
+    text-decoration: none;
+}
+
+.what-we-do #accordion .card .card-header {
+    padding: 0.5rem 1.25rem;
+}
+
+.what-we-do #accordion .card .card-header p {
+    margin: 0.5rem 0;
+}
+
+/* Quotation *************************************************/
+
+.quotation {
+    background: #f8f8f8;
+    padding: 80px 0;
+}
+
+.quotation .container {
+    padding: 0 80px;
+    align-items: center;
+    position: relative;
+}
+
+.quotation .container .carousel-item .box {
+    display: flex;
+    align-items: center;
+    height: 200px;
+}
+
+.quotation .container .carousel-item.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.quotation .container .carousel-control-prev-icon {
+    background-color: #a747e8;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: -70px;
+}
+
+.quotation .container .carousel-control-next-icon {
+    background-color: #95e1d3;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: -70px;
+}
+
+.quotation .container .item img {
+    padding: 40px;
+    border: 3px solid #95e1d3;
+}
+
+.quotation .text {
+    margin-left: 60px;
+    padding: 10px 0;
+}
+
+.quotation blockquote {
+    color: #999999;
+    font-family: "Roboto";
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+.quotation span {
+    margin-left: 5px;
+    color: #333333;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.quotation .author {
+    display: flex;
+    padding: 0 5px;
+    align-items: center;
+}
+
+.quotation .horizontal-line-red {
+    margin: 0 !important;
+}
+
+.quotation .container .arrows .fas:first-child {
+    position: absolute;
+    left: 0;
+    font-size: 30px;
+    opacity: 0.3;
+}
+
+.quotation .container .arrows .fas:last-child {
+    position: absolute;
+    right: 0;
+    font-size: 30px;
+    opacity: 0.3;
+}
+
+/* Team **********************************************************/
+
+.team {
+    padding: 100px 0 40px 0;
+}
+
+.team h2 {
+    color: #333333;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.team h1 {
+    color: #333333;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.team p {
+    color: #999999;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.team .team-photos .photo .name {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.team .team-photos .photo .job {
+    color: #999999;
+    font-family: "Roboto";
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.team .team-photos .photo {
+    flex-basis: 30%;
+    margin: 90px 20px;
+}
+
+.team .team-photos .portrait {
+    position: relative;
+    transition: all 0.3s;
+}
+
+.team .team-photos .portrait:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px #95e1d3;
+}
+
+.team .team-photos .portrait::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #cc3ce2d1, #7b2bc5d1);
+    transition: all 0.3s;
+}
+
+.team .team-photos .photo .portrait:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.team .team-photos .photo .portrait:hover .socials {
+    opacity: 0.95;
+}
+
+.team .team-photos .photo .portrait .socials {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background: #951edf;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.team .team-photos .photo .portrait .socials .item {
+    transition: all 0.3s;
+}
+
+.team .team-photos .photo .portrait .socials .item a {
+    color: #f38181;
+    font-size: 22px;
+    padding: 10px;
+}
+
+.team .team-photos .photo .portrait .socials .item:hover {
+    background: #f38181;
+}
+
+.team .team-photos .photo .portrait .socials .item:hover a {
+    color: #fff;
+}
+
+.team .team-photos .photo img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.team .team-photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Brands **********************************************************/
+
+.brands {
+    background: #f8f8f8;
+    padding: 55px 0;
+    margin-bottom: 100px;
+}
+
+.brands .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.brands .container .container-item {
+    flex-basis: 22%;
+    padding: 5px;
+}
+
+.brands .container .container-item img {
+    width: 100%;
+    display: block;
+    height: 170px;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+/* Work **********************************************************/
+
+.work h2 {
+    color: #333333;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.work h1 {
+    color: #333333;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.work p {
+    color: #999999;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.work-gallery {
+    overflow: hidden;
+    margin: 100px 0 0 0;
+}
+
+.work .work-gallery .column .row .row-item img {
+    width: 100%;
+    display: block;
+    height: 300px;
+    object-fit: cover;
+}
+
+.work .work-gallery .column .row .row-item.item-big img {
+    height: 600px;
+}
+
+.work-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work-gallery .column {
+    flex-basis: 25%;
+}
+
+.work-gallery .column .row .row-item {
+    position: relative;
+}
+
+.work-gallery .column .row .row-item::before {
+    position: absolute;
+    content: '';
+    background: #000;
+    height: 100%;
+    width: 100%;
+    opacity: 0.55;
+    transition: all 0.3s;
+}
+
+.work-gallery .column .row .row-item:hover::before {
+    opacity: 0;
+}
+
+/* Clients ********************************************************/
+
+.clients {
+    margin-top: 120px;
+    padding: 100px 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(images/bgclients.png) center center no-repeat;
+    background-size: cover;
+}
+
+.clients h2 {
+    color: #333333;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.clients h1 {
+    color: #333333;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.clients .clients-box .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.clients .clients-box .row:last-child {
+    margin-bottom: 0;
+}
+
+.clients .clients-box .row .box {
+    flex-basis: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.clients .clients-box .row .box .photo {
+    flex-basis: 15%;
+    margin-right: 25px;
+}
+
+.clients .clients-box .row .box .info {
+    flex-basis: 85%;
+}
+
+.clients .clients-box .box .info .name {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.clients .clients-box .box .info .job {
+    color: #333333;
+    font-family: "Roboto";
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.clients .clients-box .box .info .text {
+    color: #999999;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 25px;
+}
+
+.clients .clients-box .box .info .horizontal-line-red {
+    margin: 0 !important;
+}
+
+/* Blog ************************************************************/
+
+.blog {
+    padding: 100px 0;
+}
+
+.blog h2 {
+    color: #333333;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.blog h1 {
+    color: #333333;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.blog .blog-posts {
+    display: flex;
+    justify-content: center;
+}
+
+.blog .blog-posts .post .image {
+    position: relative;
+}
+
+.blog .blog-posts .post {
+    flex-basis: 30%;
+    margin: 0 15px;
+}
+
+.blog .blog-posts .post .image .post-date {
+    text-align: center;
+    background: #8531d4;
+    padding: 12px;
+    position: absolute;
+    left: -10px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog .blog-posts .post .image .post-date h4 {
+    color: #ffffff;
+    font-family: "Roboto";
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.blog .blog-posts .post .image .post-date p {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.blog .blog-posts .post .image img {
+    flex-basis: 100%;
+    display: block;
+}
+
+.blog .blog-posts .post h3 {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.blog .blog-posts .post p {
+    color: #999999;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.blog .blog-posts .post .horizontal-line-grey {
+    margin: 25px auto !important;
+}
+
+.blog .blog-posts .post .stats span {
+    color: #999999;
+    font-family: "Roboto";
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.blog .blog-posts .post .stats .far {
+    color: #8429a5;
+}
+
+.blog .blog-posts .post .stats .far.fa-comments {
+    margin-left: 10px;
+}
+
+/* Map ***************************************************************/
+
+.map {
+    padding: 50px 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(images/mapbg.png) center center no-repeat;
+    background-size: cover;
+}
+
+.map .container a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.map .fas {
+    color: #c481f3;
+    margin-bottom: 15px;
+    font-size: 22px;
+    margin: 5px auto 15px auto;
+}
+
+.map p {
+    text-align: center;
+    color: #902edf;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.map .horizontal-line-red {
+    margin: 15px auto;
+}
+
+.map .modal-body img {
+    width: 100%;
+}
+
+/* Footer *************************************************************/
+
+footer {
+    background: #f8f8f8;
+    padding: 80px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+footer .box-info .horizontal-line-grey {
+    margin: 15px auto;
+}
+
+footer .box-info h1 {
+    color: #7d23de;
+    font-size: 46px;
+    font-weight: 700;
+}
+
+footer .box-info .text {
+    color: #999999;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+footer .box-info .followers {
+    color: #333333;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 700;
+}
+
+footer .box-info .followers span {
+    color: #333333;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 14px;
+}
+
+footer .box-info .socials .follow {
+    color: #999999;
+    font-family: "Roboto";
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+footer .box-info .socials .fab {
+    margin: 0 6px;
+    color: #770fdf;
+    transition: all 0.3s;
+}
+
+footer .box-info .socials .fab:hover {
+    transform: translateY(-3px);
+}
+
+footer .box-info .socials .fab.fa-facebook {
+    margin: 0 6px 0 20px;
+}
+
+footer .box-info .subscribe input {
+    padding: 6px 10px;
+    margin-top: 40px;
+    color: #770fdf;
+    font-family: "Roboto";
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    border: 1px solid #770fdf;
+}
+
+footer .box-info .subscribe span {
+    background: #9717d7;
+    padding: 10px 28px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+footer .box-blog h1 {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+footer .box-blog .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+footer .box-blog .box .image img {
+    flex-basis: 100%;
+    display: block;
+}
+
+footer .blogs {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .box .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+footer .box .text p {
+    color: #333333;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+footer .box .text .date {
+    color: #770fdf;
+    font-family: "Roboto";
+    font-style: italic;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* footer .box-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+} */
+
+footer .box-gallery h1 {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+footer .box-gallery .photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 20px 0;
+}
+
+footer .box-gallery .photos .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .box-gallery .photos .row .item {
+    flex-basis: 30%;
+}
+
+footer .box-info {
+    flex-basis: 40%;
+}
+
+footer .box-blog {
+    flex-basis: 35%;
+}
+
+footer .box-gallery {
+    flex-basis: 25%;
+}
+
+footer [class*="box-"] {
+    padding: 15px;
+}
